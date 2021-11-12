@@ -28,7 +28,23 @@
         
         // example: 
         createCannon("top", 450);
-        
+        /*
+createCannon(type, position, delay);
+
+type: The type of cannon to be made. This can be one of the following Strings: "top", "bottom", "left", or "right"
+position: The position coordinate for the cannon along the wall it is placed.
+delay: OPTIONAL The number of milliseconds to wait before firing the first projectile
+
+       
+*/
+function create(x, y, scaleX, scaleY, immovable) {
+    var platform = game.platforms.create(x, y, 'platform');
+    platform.scale.setTo(scaleX || 1, scaleY || 1);
+    platform.body.immovable = immovable || true;
+    return platform;
+}
+        createCannon("top", 250, ) 
+        createCannon("top", 700)
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
